@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Zahide Ö. demo fotoğrafı">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0F2A4A"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#0F2A4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#bg)"/>
+  <circle cx="100" cy="82" r="34" fill="#F6C9A8"/>
+  <path d="M61 76c4-21 22-35 45-35 18 0 33 9 41 22-3 6-7 10-12 12-9-11-23-16-38-13-12 2-22 10-28 20-4-1-7-3-8-6z" fill="#1f2937"/>
+  <path d="M54 166c10-23 26-37 46-37 19 0 35 14 45 37" fill="url(#shirt)"/>
+  <path d="M69 99c9 7 43 7 61 0 2 15-1 28-6 38-9 7-20 10-25 10-4 0-15-3-24-10-5-10-8-23-6-38z" fill="#f8fffd" opacity=".96"/>
+  <circle cx="87" cy="82" r="3" fill="#2b0a10" opacity=".55"/>
+  <circle cx="113" cy="82" r="3" fill="#2b0a10" opacity=".55"/>
+  <path d="M89 96c6 4 16 4 22 0" stroke="#b66c55" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

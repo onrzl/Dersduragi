@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ders Durağı | Sık Sorulan Sorular</title>
+<meta name="description" content="Ders Durağı online birebir ders süreci, ücretlendirme, ders saatleri ve teknik gereksinimler hakkında sık sorulan sorular.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0F2A4A;
+    --ink-soft: #36506F;
+    --ink-faint: #6B829A;
+    --paper: #FFFFFF;
+    --paper-2: #F4F7FB;
+    --line: #DDE7F2;
+    --line-strong: #BFCDE0;
+    --brand: #1D4ED8;
+    --brand-deep: #0F2A4A;
+    --brand-tint: #EAF1FF;
+    --maxw: 980px;
+    --r-s: 10px;
+    --r-m: 16px;
+    --r-l: 24px;
+    --shadow: 0 24px 42px -28px rgba(231, 25, 25, 0.34);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(560px 340px at 10% -5%, rgba(29,78,216,.10), transparent 70%),
+      radial-gradient(620px 300px at 100% 0%, rgba(15,42,74,.08), transparent 72%),
+      var(--paper);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: min(var(--maxw), calc(100% - 32px)); margin: 0 auto; }
+
+  .top {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255,255,255,.9);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(8px);
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+  .top-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .brand-logo { height: 54px; width: auto; display: block; }
+  .back {
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: #fff;
+  }
+
+  .hero { padding: 18px 0 10px; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .75rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand-deep);
+    font-weight: 700;
+  }
+  .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--brand); }
+  h1 {
+    margin-top: 14px;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.8vw, 3.2rem);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+  }
+  .lead {
+    margin-top: 14px;
+    color: var(--ink-soft);
+    max-width: 66ch;
+  }
+
+  .block { padding: 10px 0 18px; }
+  .faq-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .faq {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--r-m);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  details { padding: 0; }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    font-weight: 700;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+";
+    font-size: 1.25rem;
+    line-height: 1;
+    color: var(--brand);
+    font-weight: 700;
+  }
+  details[open] summary {
+    background: var(--paper-2);
+    border-bottom: 1px solid var(--line);
+  }
+  details[open] summary::after { content: "−"; }
+  .answer {
+    padding: 14px 18px 16px;
+    color: var(--ink-soft);
+    font-size: .95rem;
+  }
+
+  .cta {
+    margin-top: 14px;
+    background: var(--brand-tint);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-m);
+    padding: 14px 16px;
+    color: var(--ink-soft);
+    font-size: .92rem;
+  }
+
+  footer {
+    margin-top: 8px;
+    padding: 12px 0 16px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-faint);
+    font-size: .88rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 560px) {
+    .brand-logo { height: 42px; }
+  }
+    .btn-primary { background: var(--brand-deep); color: #fff; }
+    .btn-primary:hover { background: var(--brand); }
+    .btn-ghost { background: #fff; border-color: var(--brand-deep); color: var(--brand-deep); }
+    .btn-ghost:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-wa:hover { background: #128C7E; }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a href="index.html" aria-label="Ders Durağı ana sayfa">
+        <img src="logo.png?v=20260623" alt="Ders Durağı logosu" class="brand-logo">
+      </a>
+      <a href="index.html" class="back">Ana Sayfaya Dön</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">SSS</span>
+        <h1>Sık Sorulan Sorular</h1>
+        <p class="lead">Online birebir ders süreci hakkında en çok sorulan konuları tek sayfada topladık. Aklınıza takılan farklı bir konu olursa iletişim bölümünden bize yazabilirsiniz.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap faq-grid">
+        <article class="faq">
+          <details open>
+            <summary>Dersler hangi sınıf seviyelerine uygun?</summary>
+            <p class="answer">2. sınıftan 12. sınıfa kadar öğrenciler için birebir online ders veriyoruz. İlkokul, ortaokul ve lise seviyelerine göre öğretmen ve program eşleştirmesi yapıyoruz.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Hangi derslerde destek alabiliriz?</summary>
+            <p class="answer">Türkçe, Matematik, Sosyal Bilgiler, Fen Bilgisi, Fizik, Kimya, Biyoloji ve Hayat Bilgisi derslerinde birebir destek sunuyoruz. Ayrıca LGS, TYT ve AYT hazırlık programlarımız bulunuyor.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Tanışma dersi ücretli mi?</summary>
+            <p class="answer">Hayır. İlk tanışma dersi ücretsizdir. Bu derste öğrencinin seviyesi ve ihtiyaçları belirlenir, ardından uygun ders planı oluşturulur.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Nasıl ödeme yapabilirim?</summary>
+            <p class="answer">Havale ve kredi kartı ile ödeme yapabilirsiniz.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Dersler hangi platform üzerinden yapılıyor?</summary>
+            <p class="answer">Dersler online olarak canlı bağlantı üzerinden gerçekleştirilir. Öğretmen ve öğrenci için en verimli olacak platform, kayıt sırasında birlikte netleştirilir.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Ders saatleri esnek mi?</summary>
+            <p class="answer">Evet. Öğrencinin okul programı ve ailenin uygunluğuna göre hafta içi veya hafta sonu ders saatleri planlanabilir. Düzenli takip için sabit saat önerilir.</p>
+          </details>
+        </article>
+
+        <article class="faq">
+          <details>
+            <summary>Veli bilgilendirmesi yapılıyor mu?</summary>
+            <p class="answer">Evet. Ders süreci boyunca öğrencinin gelişimi düzenli olarak takip edilir ve veliyle paylaşılır. Gerekli durumlarda çalışma planı güncellenir.</p>
+          </details>
+        </article>
+
+        <div class="cta">Farklı bir sorunuz varsa ana sayfadaki iletişim bölümünden bize ulaşabilirsiniz.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Ders Durağı · Bilginin bir sonraki durağı.</div>
+  </footer>
+</body>
+</html>

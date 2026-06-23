@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Elif U. demo fotoğrafı">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2b6cb0"/>
+      <stop offset="100%" stop-color="#0F2A4A"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#bg)"/>
+  <circle cx="100" cy="82" r="34" fill="#F7CDA8"/>
+  <path d="M61 75c4-21 21-35 43-35 18 0 33 9 40 24-3 5-8 9-13 10-10-12-27-17-43-12-11 3-20 11-25 20-2-4-2-5-2-7z" fill="#243b53"/>
+  <path d="M55 166c9-23 26-37 45-37 18 0 35 14 45 37" fill="url(#shirt)"/>
+  <path d="M70 99c8 7 42 7 60 0 2 16-1 28-6 38-9 7-19 9-24 9-5 0-16-2-24-9-6-10-8-22-6-38z" fill="#f7fbff" opacity=".96"/>
+  <circle cx="87" cy="82" r="3" fill="#2b0a10" opacity=".55"/>
+  <circle cx="113" cy="82" r="3" fill="#2b0a10" opacity=".55"/>
+  <path d="M89 95c6 4 15 4 21 0" stroke="#b66c55" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
