@@ -683,13 +683,21 @@
         body: JSON.stringify(Object.fromEntries(new FormData(form).entries()))
       });
 
-      if (!response.ok) throw new Error('Form gonderimi basarisiz');
+      const result = await response.json();
+      const isSuccess = response.ok && String(result.success) === 'true';
+      if (!isSuccess) throw new Error(result.message || 'Form gonderimi basarisiz');
 
       okMsg.classList.add('show');
       form.reset();
       okMsg.scrollIntoView({behavior:'smooth', block:'center'});
     } catch (err) {
-      alert('Form su an gonderilemedi. Lutfen daha sonra tekrar deneyin ya da info@dersduragi.com adresine e-posta gonderin.');
+      const msg = String(err && err.message ? err.message : '');
+      const needsActivation = msg.toLowerCase().includes('activation');
+      if (needsActivation) {
+        alert('Form henuz aktive edilmemis. info@dersduragi.com adresine gelen "Activate Form" e-postasindaki baglantiya bir kez tiklayin, sonra form normal calisir.');
+      } else {
+        alert('Form su an gonderilemedi. Lutfen daha sonra tekrar deneyin ya da info@dersduragi.com adresine e-posta gonderin.');
+      }
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = prevText;
