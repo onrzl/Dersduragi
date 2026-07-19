@@ -102,6 +102,14 @@
   .nav-links{display:flex;align-items:center;justify-content:center;gap:clamp(10px,1.4vw,22px);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;justify-self:center;min-width:0}
   .nav-links a{font-size:.88rem;font-weight:600;color:var(--ink-soft);transition:color .15s ease, background .15s ease;position:relative;padding:7px 10px;border-radius:999px;line-height:1.1;white-space:nowrap}
   .nav-links a:hover{color:var(--ink);background:var(--paper-2)}
+  .nav-dd{position:relative}
+  .nav-dd > summary{list-style:none;font-size:.88rem;font-weight:600;color:var(--ink-soft);padding:7px 10px;border-radius:999px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
+  .nav-dd > summary::after{content:"▾";font-size:.72rem;line-height:1;transform:translateY(1px)}
+  .nav-dd > summary::-webkit-details-marker{display:none}
+  .nav-dd > summary:hover{color:var(--ink);background:var(--paper-2)}
+  .nav-dd-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 22px 40px -28px rgba(43,10,16,.35);padding:8px;display:grid;gap:4px;z-index:60}
+  .nav-dd-menu a{padding:9px 10px;border-radius:10px;font-size:.86rem;font-weight:600;color:var(--ink-soft)}
+  .nav-dd-menu a:hover{background:var(--paper-2);color:var(--ink)}
   .nav-cta{display:flex;align-items:center;gap:10px}
   .nav-cta .btn{padding:11px 16px;font-size:.88rem}
   .menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:9px;width:42px;height:42px;cursor:pointer}
@@ -243,6 +251,11 @@
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(29,78,216,.14);background:#fff}
   .field textarea{resize:vertical;min-height:84px}
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .kvkk-box{margin-top:8px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--paper-2)}
+  .kvkk-box p{font-size:.83rem;line-height:1.5;color:var(--ink-soft)}
+  .kvkk-check{display:flex;align-items:flex-start;gap:10px;margin-top:12px}
+  .kvkk-check input{margin-top:3px;accent-color:var(--brand)}
+  .kvkk-check label{font-size:.84rem;line-height:1.45;color:var(--ink-soft)}
   .form-note{font-size:.82rem;color:var(--ink-faint);margin-top:6px}
   .form-ok{display:none;align-items:center;gap:12px;background:var(--brand-tint);border:1px solid var(--line-strong);color:var(--brand-deep);padding:16px;border-radius:var(--r-m);font-weight:600;font-size:.95rem;margin-bottom:18px}
   .form-ok.show{display:flex}
@@ -283,6 +296,10 @@
   @media(max-width:920px){
     .brand-logo{height:44px}
     .nav-links{display:none}
+    .menu-open .nav-dd{width:100%;border-bottom:1px solid var(--line)}
+    .menu-open .nav-dd > summary{padding:10px 4px;border-radius:0;justify-content:space-between}
+    .menu-open .nav-dd-menu{position:static;min-width:0;border:none;box-shadow:none;padding:0 0 8px 12px;background:transparent}
+    .menu-open .nav-dd-menu a{padding:8px 0;font-size:.85rem}
     .nav-cta .btn-primary{display:none}
     .menu-btn{display:block}
     .menu-open .nav-links{display:flex;position:absolute;top:76px;left:16px;right:16px;flex-direction:column;gap:0;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 42px -30px rgba(43,10,16,.35);padding:8px 18px 12px}
@@ -312,11 +329,16 @@
     </a>
     <nav class="nav-links">
       <a href="#sinavlar">Sınav Hazırlık</a>
-      <a href="#ogretmenler">Öğretmenler</a>
-      <a href="sinav-sonuclari.html">Geçmiş Sonuçlar</a>
-      <a href="#nasil">Nasıl İşler</a>
-      <a href="sss.html">SSS</a>
+      <a href="#ogretmenler">Eğitimci Kadromuz</a>
       <a href="#iletisim">İletişim</a>
+      <details class="nav-dd">
+        <summary>Daha Fazla</summary>
+        <div class="nav-dd-menu">
+          <a href="sinav-sonuclari.html">Geçmiş Sonuçlar</a>
+          <a href="#nasil">Nasıl İşler</a>
+          <a href="sss.html">SSS</a>
+        </div>
+      </details>
     </nav>
     <div class="nav-cta">
       <a href="#bransch" class="btn btn-ghost">Branşları incele</a>
@@ -461,7 +483,7 @@
       <div class="step reveal"><span class="num">1</span><h3>Başvuru</h3><p>Formu doldurun ya da WhatsApp'tan yazın. Sınıf ve branş bilgisini alalım.</p></div>
       <div class="step reveal d1"><span class="num">2</span><h3>Tanışma & seviye tespiti</h3><p>Ücretsiz tanışma dersinde öğrencinin seviyesini ve eksiklerini belirleriz. Yapay zeka destekli analiz çıkarırız.</p></div>
       <div class="step reveal d2"><span class="num">3</span><h3>Birebir program</h3><p>Öğrenciye özel ders planı oluşturur, uygun saatlerde online derslere başlarız.</p></div>
-      <div class="step reveal d3"><span class="num">4</span><h3>Düzenli takip</h3><p>Gelişimi ölçer, veliyi bilgilendirir; planı ihtiyaca göre güncelleriz.</p></div>
+      <div class="step reveal d3"><span class="num">4</span><h3>Düzenli takip</h3><p>Gelişimi ölçer, veliyi bilgilendirir, planı ihtiyaca göre güncelleriz.</p></div>
     </div>
   </div>
 </section>
@@ -470,14 +492,14 @@
 <section class="block why" id="ogretmenler">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Öğretmenlerimiz</span>
+      <span class="eyebrow">Eğitimci Kadromuz</span>
       <h2>Alanında uzman kadro</h2>
       <p>Her branşı, o alanda deneyimli ve birebir derse hâkim öğretmenler yürütür.</p>
     </div>
     <div class="teach-grid">
       <article class="teacher reveal" style="--c:var(--s-mat)">
         <div class="top"><div><div class="nm">Hicran K.</div><div class="br">Matematik Öğretmeni</div></div></div>
-        <p>Matematik eğitimi, ölçme-değerlendirme ve öğrenci koçluğu alanlarında deneyimli bir eğitimci. Öğrencilerin akademik gelişimini bireysel olarak takip eder; planlı, çözüm odaklı ve öğrenci merkezli çalışma anlayışıyla hedeflerine ulaşmalarını destekler.</p>
+        <p>Matematik eğitimi, ölçme-değerlendirme ve öğrenci koçluğu alanlarında deneyimli bir eğitimci. Öğrencilerin akademik gelişimini bireysel olarak takip eder, planlı, çözüm odaklı ve öğrenci merkezli çalışma anlayışıyla hedeflerine ulaşmalarını destekler.</p>
         <div class="meta"><span class="chip">2–12. sınıf</span><span class="chip">Birebir takip</span></div>
       </article>
       <article class="teacher reveal d1" style="--c:var(--s-turkce)">
@@ -553,7 +575,7 @@
         <li><span class="ic">✉️</span><div><strong>info@dersduragi.com</strong><small>E-posta ile ulaşın</small></div></li>
       </ul>
       <div class="wa-row">
-        <a href="https://wa.me/90XXXXXXXXXX" class="btn btn-wa">WhatsApp'tan yazın</a>
+        <a href="https://wa.me/905055621580" class="btn btn-wa">WhatsApp'tan yazın</a>
       </div>
     </div>
 
@@ -561,11 +583,11 @@
       <div class="form-ok" id="okMsg"><span>✓</span> Başvurunuz alındı. En kısa sürede sizinle iletişime geçeceğiz.</div>
       <input type="hidden" name="_subject" value="Yeni Ders Duragi Basvuru Formu">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
       <div class="grid-2">
         <div class="field"><label for="ad">Veli / öğrenci adı</label><input id="ad" name="ad" type="text" placeholder="Ad soyad" required></div>
         <div class="field"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" placeholder="05XX XXX XX XX" required></div>
       </div>
+      <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" placeholder="ornek@eposta.com" required></div>
       <div class="grid-2">
         <div class="field"><label for="sinif">Öğrencinin sınıfı</label>
           <select id="sinif" name="sinif" required>
@@ -587,6 +609,13 @@
         </div>
       </div>
       <div class="field"><label for="not">Notunuz <span style="color:var(--ink-faint);font-weight:500">(isteğe bağlı)</span></label><textarea id="not" name="not" placeholder="Eklemek istedikleriniz…"></textarea></div>
+      <div class="kvkk-box">
+        <p>KVKK Aydınlatma Metni: Form aracılığıyla paylaştığınız ad-soyad, telefon, e-posta, sınıf ve ders bilgileri; başvurunuzun değerlendirilmesi, sizinle iletişime geçilmesi ve eğitim sürecinin planlanması amacıyla işlenir. Verileriniz yalnızca ilgili iletişim ve planlama süreçlerinde kullanılır, yasal zorunluluklar dışında üçüncü kişilerle paylaşılmaz.</p>
+      </div>
+      <div class="kvkk-check">
+        <input id="kvkkOnay" name="kvkk_onay" type="checkbox" value="onaylandi" required>
+        <label for="kvkkOnay">KVKK Aydınlatma Metni'ni okudum, kişisel verilerimin belirtilen kapsamda işlenmesini kabul ediyorum.</label>
+      </div>
       <button type="submit" class="btn btn-trial" style="width:100%">Ücretsiz tanışma dersi için başvur</button>
       <p class="form-note">Gönderdiğinizde bilgileriniz yalnızca sizinle iletişim için kullanılır.</p>
     </form>
@@ -626,7 +655,7 @@
         <h4>İletişim</h4>
         <ul>
           <li><a href="#iletisim">Başvuru formu</a></li>
-          <li><a href="https://wa.me/90XXXXXXXXXX">WhatsApp</a></li>
+          <li><a href="https://wa.me/905055621580">WhatsApp</a></li>
           <li><a href="mailto:info@dersduragi.com">E-posta</a></li>
         </ul>
       </div>
